@@ -1,0 +1,53 @@
+@font-face { font-family: "Pixelify Sans"; src: url("/pixel-ui/fonts/PixelifySans.ttf") format("truetype"); font-style: normal; font-weight: 400 700; font-display: swap; }
+:root {
+  --night: #fff5db; --night-2: #f0e5c7; --night-3: #e2d3ae;
+  --ink: #293b32; --ink-dim: #53634f; --sun: #785522; --sun-hot: #d4a453;
+  --shadow: #70578b; --blood: #a43e43; --ok: #2d6944; --warn: #805a1f;
+  --line: #a89a75; --radius: 0px; --edge: #3c4c3b; --paper: #fff5db;
+  --font-ui: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-title: "Pixelify Sans", ui-monospace, monospace;
+  --pixel-frame: 0 0 0 1px #3c4c3b, 0 2px 0 1px #3c4c3b, 2px 0 0 1px #3c4c3b, -2px 0 0 1px #3c4c3b, 0 -2px 0 1px #3c4c3b;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body { background: var(--night); color: var(--ink); font-family: var(--font-ui); line-height: 1.45; }
+button, input, select { font: inherit; }
+button { color: var(--ink); cursor: pointer; border: 2px solid var(--edge); border-radius: 0; padding: .65em 1.1em; background: #eee2bf; font-weight: 700; letter-spacing: .02em; box-shadow: inset 0 2px #fff9e7, inset 0 -2px #c5b18b, 0 3px 0 #3c4c3b; touch-action: manipulation; }
+button:active:not(:disabled) { transform: translateY(2px); box-shadow: inset 0 2px #c5b18b, 0 1px 0 #3c4c3b; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+button.primary { background: #eec66e; color: #3f351f; box-shadow: inset 0 2px #ffe6a0, inset 0 -2px #bb8f40, 0 3px 0 #3c4c3b; }
+button.danger { background: #ac474b; color: #fff8e7; box-shadow: inset 0 2px #d97c74, 0 3px #493a34; }
+button.ghost { background: #f8edd1; border: 2px solid #8c815f; }
+:where(button, a, input, select):focus-visible { outline: 3px solid #4c4095; outline-offset: 5px; }
+a { color: #405943; text-underline-offset: 3px; }
+input, select { color: var(--ink); background: #fffbeb; border: 2px solid #8c815f; border-radius: 0; padding: .6em .8em; box-shadow: inset 2px 2px #ddd2af; font-size: max(1rem, 1em); }
+input[type="checkbox"] { accent-color: #386847; min-width: 20px; min-height: 20px; }
+.title { font-family: var(--font-title); font-weight: 700; letter-spacing: .02em; }
+.chip { display: inline-flex; align-items: center; gap: .45em; padding: .28em .6em; border: 1px solid #b2a27d; background: #f6ebcf; font-size: .82rem; font-weight: 600; white-space: nowrap; }
+.chip::before { content: ""; width: 6px; height: 6px; background: var(--ink-dim); box-shadow: 1px 1px #fff9e4; }
+.chip.ok::before { background: var(--ok); } .chip.warn::before { background: var(--warn); } .chip.bad::before { background: var(--blood); }
+.chip.sim { background: #e9def0; color: #624777; } .chip.sim::before { background: #80619a; }
+.hidden { display: none !important; }
+@media (hover: hover) { button:hover:not(:disabled) { background-color: #ddd5ad; } button.primary:hover:not(:disabled) { background-color: #f9d78b; } button.danger:hover:not(:disabled) { background-color: #973c44; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+/* The existing home markup is themed without touching routes or scripts. */
+.home { min-height: 100dvh; display: grid; place-items: center; padding: 40px 24px; background: linear-gradient(#c0ded4 0 220px, transparent 220px), url("/pixel-ui/grass.svg"); }
+.home main { position: relative; width: 100%; max-width: 1080px; text-align: center; }
+.home main::before { content: ""; position: absolute; top: 190px; left: 0; right: 0; height: 238px; background: #78b96a url("/pixel-ui/village.svg") center / cover no-repeat; border: 2px solid #49634a; box-shadow: var(--pixel-frame), 0 8px 0 #446c45; image-rendering: pixelated; pointer-events: none; }
+.home h1 { font-size: clamp(3.8rem, 8vw, 6.4rem); margin: 0; color: #973e48; text-shadow: 2px 2px #fff4d4, 4px 4px #533d48; line-height: .95; }
+.home .sub { font-family: var(--font-title); font-size: 1.3rem; letter-spacing: .12em; color: #324c3d; margin-top: 12px; }
+.home .tag { color: #3d5747; font-style: normal; margin: 8px 0 304px; }
+.home .choices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; text-align: left; }
+.home .choice { display: block; position: relative; text-decoration: none; color: var(--ink); background: #fff5db; border: 1px solid #b6a37a; border-radius: 0; padding: 22px 18px; box-shadow: var(--pixel-frame), inset 0 3px #fffdf2, 0 7px 0 #446c45; transition: none; }
+.home .choice::before { content: ""; display: block; width: 24px; height: 3px; background: #9e584d; margin-bottom: 16px; box-shadow: 4px -3px #9e584d; }
+.home .choice:nth-child(2)::before { background: #527e54; box-shadow: 4px -3px #527e54; }
+.home .choice:nth-child(3)::before { background: #80619a; box-shadow: 4px -3px #80619a; }
+.home .choice:nth-child(4)::before { background: #a58240; box-shadow: 4px -3px #a58240; }
+.home .choice b { display: block; font-family: var(--font-title); font-size: 1.5rem; line-height: 1.1; margin-bottom: 10px; }
+.home .choice span { display: block; color: #53634f; font-size: .88rem; line-height: 1.6; }
+.home .choice.main { color: #3c351f; background: #f4d386; } .home .choice.main span { color: #5c502f; }
+.home .foot { margin: 26px 0 0; color: #203d2a; font-size: .85rem; } .home .foot a { color: #203d2a; font-weight: 700; }
+@media (hover: hover) { .home .choice:hover { transform: translateY(-3px); border-color: #fff7d8; background-color: #fffae9; } .home .choice.main:hover { background-color: #ffe0a0; } }
+@media (max-width: 850px) { .home { padding: 28px 20px; } .home .choices { grid-template-columns: repeat(2, minmax(0, 1fr)); } .home main::before { top: 150px; height: 210px; } .home .tag { margin-bottom: 254px; } }
+@media (max-width: 480px) { .home { padding: 28px 18px; } .home .sub { font-size: 1rem; letter-spacing: .06em; } .home .tag { font-size: .85rem; margin-bottom: 220px; } .home main::before { top: 141px; height: 176px; background-size: auto 176px; } .home .choices { gap: 14px; } .home .choice { padding: 16px 12px; } .home .choice b { font-size: 1.2rem; } .home .choice span { font-size: .82rem; } .home .foot { font-size: .76rem; } }

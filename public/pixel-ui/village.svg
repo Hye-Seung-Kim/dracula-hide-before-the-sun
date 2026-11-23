@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="256" viewBox="0 0 480 128" shape-rendering="crispEdges">
+<defs>
+<pattern id="grass" width="16" height="16" patternUnits="userSpaceOnUse"><path fill="#78b96a" d="M0 0h16v16H0z"/><path fill="#67a65b" d="M3 3h2v2H3zM10 11h2v2h-2z"/><path fill="#9bce77" d="M4 2h1v2H4zM11 10h1v2h-1z"/></pattern>
+<pattern id="stone" width="16" height="12" patternUnits="userSpaceOnUse"><path fill="#a9bfc0" d="M0 0h16v12H0z"/><path fill="#d4ded2" stroke="#8ca5a3" stroke-width="1" d="M1 1h6v4H1zM9 1h6v4H9zM-3 7h6v4h-6zM5 7h6v4H5zM13 7h6v4h-6z"/></pattern>
+<g id="tree"><path fill="#456849" d="M-10 12h22v4h-22z"/><path fill="#9c734b" d="M-2 3h5v12h-5z"/><path fill="#294f42" d="M-8-15H8v4h4V4H8v4H-8V4h-4v-15h4z"/><path fill="#417b50" d="M-8-17H5v4h4v12H5v4H-8v-4h-3v-12h3z"/><path fill="#71a85d" d="M-5-17h7v3h-7zM-8-13h3v6h-3z"/></g>
+<g id="house"><path fill="#456849" d="M-32 31h68v5h-68z"/><path fill="#51483d" d="M-31-4h62v38h-62z"/><path fill="#f0e8c9" d="M-29-4h58v36h-58z"/><path fill="#d1cfb3" d="M-29 2h10v3h-10zM19 8h10v3H19zM-29 26h8v3h-8z"/><path fill="#51483d" d="M-35-29h70V0h-70z"/><path fill="currentColor" d="M-33-27h66v25h-66z"/><path fill="#ffffff" opacity=".18" d="M-30-26h3v23h-3zM-22-26h3v23h-3zM-14-26h3v23h-3zM-6-26h3v23h-3zM2-26h3v23H2zM10-26h3v23h-3zM18-26h3v23h-3zM26-26h3v23h-3z"/><path fill="#e7c891" d="M-33-2h66v3h-66z"/><path fill="#72523a" d="M-10 9h20v23h-20z"/><path fill="#b3834e" d="M-8 11H8v21H-8z"/><path fill="#93673d" d="M-4 12h1v19h-1zM2 12h1v19H2z"/><path fill="#f6d781" d="M5 22h2v2H5z"/><path fill="#51483d" d="M-25 9h10v15h-10zM15 9h10v15H15z"/><path fill="#71bfd0" d="M-23 11h6v11h-6zM17 11h6v11h-6z"/><path fill="#b4ecdf" d="M-23 11h2v8h-2zM17 11h2v8h-2z"/></g>
+<g id="flowers"><path fill="#47794b" d="M0 0h1v5H0zM4 2h1v5H4z"/><path fill="#ffefab" d="M-1-1h3v3h-3z"/><path fill="#d48376" d="M3 1h3v3H3z"/></g>
+<g id="bench"><path fill="#533e2f" d="M-16-7h32v13h-32zM-13 6h3v6h-3zM10 6h3v6h-3z"/><path fill="#bd945b" d="M-15-6h30v3h-30zM-15-2h30v3h-30zM-15 2h30v3h-30z"/></g>
+</defs>
+<path fill="#c0ded4" d="M0 0h480v128H0z"/><path fill="#edf1d1" d="M18 10h31v4H18zM24 6h18v4H24zM372 8h42v4h-42zM380 4h24v4h-24z"/>
+<path fill="#f6db85" d="M240 0h15v3h6v14h-6v4h-15v-4h-5V3h5z"/>
+<path fill="#8fbc83" d="M0 29h20v-6h20v6h32v-9h24v9h35v-5h26v5h57v-7h18v7h56v-5h29v5h40v-9h30v9h35v-6h29v6h30v-5h21v10H0z"/>
+<path fill="url(#grass)" d="M0 34h480v94H0z"/>
+<path fill="#547e56" d="M0 90h480v29H0zM223 34h34v94h-34z"/>
+<path fill="url(#stone)" d="M0 92h480v25H0zM225 34h30v94h-30z"/>
+<path fill="#d2af7f" d="M52 72h24v20H52zM142 72h24v20h-24zM314 72h24v20h-24zM404 72h24v20h-24z"/>
+<use href="#house" x="64" y="43" color="#b95751"/><use href="#house" x="154" y="43" color="#4d8057"/><use href="#house" x="326" y="43" color="#80619a"/><use href="#house" x="416" y="43" color="#b8904d"/>
+<use href="#tree" x="17" y="69"/><use href="#tree" x="199" y="68"/><use href="#tree" x="281" y="68"/><use href="#tree" x="463" y="69"/>
+<use href="#bench" x="105" y="113"/><use href="#bench" x="373" y="113"/>
+<use href="#flowers" x="39" y="113"/><use href="#flowers" x="181" y="87"/><use href="#flowers" x="292" y="118"/><use href="#flowers" x="444" y="113"/>
+<!-- Dracula, an original tiny traveler -->
+<path fill="#697b70" d="M231 114h19v3h-19z"/><path fill="#433b53" d="M234 99h12v15h-12zM231 103h3v11h-3zM246 103h3v11h-3z"/><path fill="#9c5369" d="M235 101h10v9h-10z"/><path fill="#f1cc9a" d="M235 91h10v10h-10z"/><path fill="#38394b" d="M233 89h14v5h-14zM233 94h3v4h-3zM244 94h3v4h-3zM236 113h3v3h-3zM242 113h3v3h-3z"/><path fill="#38394b" d="M237 96h1v2h-1zM242 96h1v2h-1z"/>
+</svg>

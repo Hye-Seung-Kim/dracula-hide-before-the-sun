@@ -1,0 +1,10 @@
+@font-face { font-family: "Pixelify Sans"; src: url("/pixel-ui/fonts/PixelifySans.ttf") format("truetype"); font-weight: 400 700; font-display: swap; }
+@media screen {
+ body { background: #76ad66 url("/pixel-ui/grass.svg"); color: #293b32; padding: 32px 20px; }
+ .noprint { max-width: 900px; padding: 24px; background: #fff5db; border: 2px solid #40523c; box-shadow: 3px 4px #40523c; margin-bottom: 28px; }
+ .noprint h1 { font-family: "Pixelify Sans", monospace; font-size: 2.6rem; color: #873f4b; }
+ .noprint code { background: #e9ddbc; border-radius: 0; }
+ .noprint button, .noprint select { font: inherit; color: #293b32; background: #f4d386; border: 2px solid #536248; border-radius: 0; padding: 8px 12px; min-height: 44px; }
+ .noprint :focus-visible { outline: 3px solid #4c4095; outline-offset: 4px; }
+ .sheet .card { background: white; }
+}

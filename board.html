@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dracula Board</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="board-page">
+  <div class="board-root">
+    <main class="stage" id="stage">
+      <canvas id="city" aria-label="City board with four QR anchors"></canvas>
+      <div class="safe" id="safe">
+        <div class="card hidden" id="card" role="dialog" aria-live="polite"></div>
+        <div class="result hidden" id="result" aria-live="assertive"></div>
+        <div class="toasts" id="toasts"></div>
+        <div class="subtitle hidden" id="subtitle" aria-live="polite"></div>
+      </div>
+      <div class="sim-badge hidden" id="sim-badge">Mouse mode · drag Dracula to a hiding spot</div>
+    </main>
+
+    <aside class="panel" id="panel">
+      <header class="brand">
+        <img class="brand-bat" src="/pixel-ui/bat.svg" alt="" aria-hidden="true" />
+        <div class="title brand-title">Dracula</div>
+        <div class="brand-sub">HIDE BEFORE THE SUN</div>
+        <div class="tagline">A little town. One very sunny day.</div>
+      </header>
+
+      <div id="game-panel">
+        <section class="level-box">
+          <div class="level-kicker" id="p-kicker">LEVEL 1 · FIND THE SHADOW</div>
+          <div class="level-title" id="p-title">The First Hiding Spot</div>
+        </section>
+        <div class="quest-guide">
+          <div class="guide-character"><img src="/pixel-ui/dracula.svg" alt="" aria-hidden="true" /><span>Dracula</span></div>
+          <section class="mission" id="p-mission"></section>
+        </div>
+        <section class="env">
+          <div class="env-row"><span>City</span><b id="p-city">New York</b></div>
+          <div class="env-row"><span>Date</span><b id="p-date">—</b></div>
+          <div class="env-time"><span>Local time</span><b id="p-time">—</b></div>
+        </section>
+        <section class="compass-wrap">
+          <svg id="compass" viewBox="-60 -60 120 120" aria-label="Compass: north is the top of the board"></svg>
+          <div class="sunbox" id="p-sun"><span>Sun</span><b>?</b></div>
+        </section>
+        <section class="status" id="p-status"></section>
+        <section class="blockers" id="p-blockers" aria-live="polite"></section>
+        <section class="actions" id="p-actions"></section>
+        <section class="results" id="p-results"></section>
+      </div>
+
+      <div id="workshop-panel" class="hidden"></div>
+
+      <footer class="toolbar">
+        <span class="session" id="p-session" title="Session code">····</span>
+        <button class="ghost tool" id="t-mute" title="Mute (M)">🔊</button>
+        <button class="ghost tool" id="t-workshop" title="Workshop demo mode (W)">Workshop</button>
+        <button class="ghost tool" id="t-sim" title="Mouse simulator (S)">Sim</button>
+        <button class="ghost tool" id="t-debug" title="Debug (D)">Debug</button>
+        <button class="ghost tool" id="t-full" title="Fullscreen (F)">⛶</button>
+      </footer>
+      <div class="debug hidden" id="debug"></div>
+    </aside>
+  </div>
+  <script type="module" src="/src/board/main.ts"></script>
+</body>
+</html>

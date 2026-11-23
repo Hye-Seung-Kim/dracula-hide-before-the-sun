@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dracula — Hide Before the Sun</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .home { min-height: 100dvh; display: grid; place-items: center; padding: 24px 16px; background: radial-gradient(ellipse at 50% 0%, #3a2470 0%, #120d24 60%); }
+    .home main { max-width: 760px; width: 100%; text-align: center; }
+    .home h1 { font-size: clamp(2.4rem, 8vw, 4.6rem); margin: 0; color: #e5484d; text-shadow: 0 4px 0 #000; line-height: 1; }
+    .home .sub { letter-spacing: 0.3em; font-weight: 700; color: #ffb547; margin-top: 10px; }
+    .home .tag { color: #b9addb; font-style: italic; margin: 10px 0 30px; }
+    .choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+    .choice { display: block; text-decoration: none; color: inherit; background: #1c1538; border: 1px solid rgba(246,236,217,0.14); border-radius: 18px; padding: 22px 18px; text-align: left; transition: transform 0.15s ease, border-color 0.2s; }
+    .choice:hover { transform: translateY(-3px); border-color: #ffb547; }
+    .choice b { display: block; font-size: 1.2rem; margin-bottom: 6px; }
+    .choice span { color: #b9addb; font-size: 0.9rem; line-height: 1.45; }
+    .choice.main { background: linear-gradient(160deg, #ffb547, #ff7a2f); color: #2a1300; }
+    .choice.main span { color: #4a2500; }
+    .foot { margin-top: 24px; font-size: 0.85rem; color: #b9addb; }
+    .foot a { color: #ffb547; }
+  </style>
+</head>
+<body class="home">
+  <main>
+    <h1 class="title">Dracula</h1>
+    <div class="sub">HIDE BEFORE THE SUN</div>
+    <p class="tag">Can you predict where the shadows will fall?</p>
+    <div class="choices">
+      <a class="choice main" href="/board"><b>💻 Host Game</b><span>On the LAPTOP. Shows the board, the four QR anchors and a session code.</span></a>
+      <a class="choice" href="/camera"><b>📱 Phone Camera</b><span>On the PHONE (HTTPS). Mount it above the laptop, enter the code.</span></a>
+      <a class="choice" href="/board?workshop=1&sim=1"><b>🧪 Workshop Demo</b><span>Zones, position, movement and directionality demos (mouse simulator on).</span></a>
+      <a class="choice" href="/markers"><b>🖨 Print Markers</b><span>Dracula + Shield QR cards at the right size.</span></a>
+    </div>
+    <p class="foot">School of Visual Arts · Spatial Computing · <a href="/board?sim=1">Play with mouse only</a></p>
+  </main>
+  <script type="module">import "/src/styles/base.css";</script>
+</body>
+</html>

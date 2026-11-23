@@ -1,0 +1,29 @@
+{
+  "name": "dracula-hide-before-the-sun",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.ts --dev",
+    "build": "tsc --noEmit && vite build",
+    "start": "node server/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "jsqr": "^1.4.0",
+    "qrcode": "^1.5.4",
+    "selfsigned": "^5.5.0",
+    "suncalc": "^2.1.4",
+    "ws": "^8.22.2",
+    "zxing-wasm": "^3.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/qrcode": "^1.5.6",
+    "@types/ws": "^8.18.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}

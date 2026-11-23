@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dracula Markers</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 16px; background: #fff; color: #111; }
+    .noprint { max-width: 760px; margin: 0 auto 16px; line-height: 1.5; }
+    .noprint h1 { margin: 0 0 6px; }
+    .noprint code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; }
+    .sheet { display: flex; flex-wrap: wrap; gap: 14mm; justify-content: center; }
+    .card { border: 0.3mm dashed #999; padding: 4mm; display: flex; flex-direction: column; align-items: center; gap: 2mm; }
+    .card h3 { margin: 0; font-size: 11pt; letter-spacing: 0.08em; }
+    .card .arrow { font-size: 10pt; font-weight: 700; }
+    .card .note { font-size: 8pt; color: #555; max-width: 60mm; text-align: center; }
+    .shield-card { position: relative; }
+    .shield-card { gap: 0; }
+    .shield-card .wall-label { font-size: 7.5pt; font-weight: 700; color: #8a5a2b; margin-bottom: 1mm; }
+    .shield-card .wall { width: 100%; border-top: 0.6mm solid #8a5a2b; }
+    canvas { image-rendering: pixelated; }
+    @media print { .noprint { display: none; } body { padding: 0; } }
+  </style>
+  <link rel="stylesheet" href="/pixel-ui/markers.css" />
+</head>
+<body>
+  <div class="noprint">
+    <h1>Printable markers</h1>
+    <p>Print at <b>100% / Actual size</b> (not "fit to page"). Each QR prints at the size chosen below. Glue it <b>flat and upright</b> on top of the object: the
+      ▲ arrow is the object's <b>facing direction</b> (used for the directional rays).</p>
+    <p>Size: <select id="size"><option value="22">22 mm</option><option value="25" selected>25 mm (recommended)</option><option value="30">30 mm (camera &gt; 45 cm high)</option></select>
+      &nbsp;<button onclick="print()">Print</button></p>
+    <p><b>Shield:</b> fold a cardboard wall about <b>3.4 cm wide × 6 cm tall</b> (game scale on a 13" laptop: 44 m × 80 m)
+      and glue it standing up along the brown "WALL" line, so the QR card lies flat <i>behind</i> the wall and the ▲ arrow points <i>through</i> the wall toward Dracula.
+      The wall offset (0.75 × QR size in front of the QR center) can be tuned in the board's Debug panel.</p>
+  </div>
+  <div class="sheet" id="sheet"></div>
+  <script type="module" src="/src/markers/main.ts"></script>
+</body>
+</html>
